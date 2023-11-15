@@ -49,7 +49,8 @@ def get_xy(img_model_path):
         print(f'end{end}')
         cv2.rectangle(shot_copy, star, end, (255, 255, 255), thickness=2)
         cv2.imshow('shot_copy', cv2.resize(shot_copy, None, fx=0.6, fy=0.6))
-        cv2.waitKey()
+        # cv2.waitKey()
+        time.sleep(5)
         cv2.destroyAllWindows()
         center = (int((upper_left[0] + lower_right[0]) / 2), int((upper_left[1] + lower_right[1]) / 2))
 
@@ -68,4 +69,4 @@ def routine(img_model_path, name):
         auto_click(avg)
 
 
-routine("./Pic/img.png", "任务")
+routine("./Pic/kaizhan.png", "任务")
